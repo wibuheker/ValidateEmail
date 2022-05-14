@@ -6,7 +6,7 @@ Hanya kegabutan yang tidak berfaidah
 
 ## Install
 ```
-git clone https://github.com/wibuheker/ValidatorEmail
+git clone https://github.com/wibuheker/ValidateEmail
 cd ValidatorEmail
 pip install -r requirements.txt
 ```
@@ -15,7 +15,6 @@ pip install -r requirements.txt
 
 ## Usage
 ```
-ValidateEmail git:(master) ✗ python run.py -h
 usage: run.py [-h] -e EMAIL [-t {normal,thread}] [--threads THREADS]
 
 Check if an email is valid.
