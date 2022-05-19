@@ -1,5 +1,6 @@
 import argparse
 from colorama import Fore
+from libs.apple import Apple
 from libs.yahoo import Yahoo
 from libs.socket_ import Socket_
 from libs.thread import ThreadPool
@@ -12,6 +13,8 @@ def Check(email: str):
     
     if 'yahoo' in domain:
         isValid = Yahoo.verify(email)
+    elif 'icloud.com' in domain:
+        isValid = Apple(email).check
     else:
         mx_ip = find_mx_record(domain)
         socks = Socket_(mx_ip)

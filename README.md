@@ -27,3 +27,12 @@ optional arguments:
                         Type of check Normal or Thread
   --threads THREADS     Number of threads to use
   ```
+
+<br>
+
+## Support
+- icloud.com
+- gmail
+- yahoo
+- comcast
+- and many more
