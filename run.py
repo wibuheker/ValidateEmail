@@ -13,7 +13,7 @@ def Check(email: str):
     
     if 'yahoo' in domain:
         isValid = Yahoo.verify(email)
-    elif 'icloud.com' in domain:
+    elif domain in ['icloud.com', 'me.com', 'mac.com']:
         isValid = Apple(email).check
     else:
         mx_ip = find_mx_record(domain)
