@@ -6,6 +6,10 @@ from libs.socket_ import Socket_
 from libs.thread import ThreadPool
 from libs.utils import find_mx_record, get_domain
 
+def save(filename: str, content: str):
+    with open(filename, 'a+') as f:
+        f.write(content + '\n')
+
 def Check(email: str):
     domain = get_domain(email)
     
@@ -23,8 +27,10 @@ def Check(email: str):
     
     if isValid:
         print(f'[+] {email} -> {Fore.GREEN}VALID{Fore.RESET}.')
+        save('valid.txt', email)
     else:
         print(f'[-] {email} -> {Fore.RED}INVALID{Fore.RESET}.')
+        save('invalid.txt', email)
 
 if __name__ == '__main__':
 
